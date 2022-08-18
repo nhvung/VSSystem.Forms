@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B1453BF-7C69-40C8-8353-BB41D382EFB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VSSystem.Forms</RootNamespace>
+    <AssemblyName>VSSystem.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\SourceCode\BS\DLLChuan\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\SourceCode\BS\DLLChuan\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectDatabaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectDatabaseDialog.Designer.cs">
+      <DependentUpon>ConnectDatabaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyFolderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyFolderDialog.Designer.cs">
+      <DependentUpon>CopyFolderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseSelectedArgs.cs" />
+    <Compile Include="DatabaseUtilityProcess.cs" />
+    <Compile Include="DBAuthentications.cs" />
+    <Compile Include="DBConnectionInfo.cs" />
+    <Compile Include="DelegateProcess.cs" />
+    <Compile Include="UCDatabaseConfiguration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDatabaseConfiguration.Designer.cs">
+      <DependentUpon>UCDatabaseConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCDatabaseLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDatabaseLogin.Designer.cs">
+      <DependentUpon>UCDatabaseLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDirectory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDirectory.Designer.cs">
+      <DependentUpon>UCDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFolder.Designer.cs">
+      <DependentUpon>UCFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCINIConfiguration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCINIConfiguration.Designer.cs">
+      <DependentUpon>UCINIConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLogDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLogDialog.Designer.cs">
+      <DependentUpon>ViewLogDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win32Form.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConnectDatabaseDialog.resx">
+      <DependentUpon>ConnectDatabaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyFolderDialog.resx">
+      <DependentUpon>CopyFolderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDatabaseConfiguration.resx">
+      <DependentUpon>UCDatabaseConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDatabaseLogin.resx">
+      <DependentUpon>UCDatabaseLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDirectory.resx">
+      <DependentUpon>UCDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFolder.resx">
+      <DependentUpon>UCFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCINIConfiguration.resx">
+      <DependentUpon>UCINIConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLogDialog.resx">
+      <DependentUpon>ViewLogDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
